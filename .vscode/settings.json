@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "initializer_list": "cpp",
+        "limits": "cpp",
+        "regex": "cpp",
+        "type_traits": "cpp",
+        "valarray": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "functional": "cpp",
+        "future": "cpp",
+        "istream": "cpp",
+        "string": "cpp",
+        "random": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "ratio": "cpp",
+        "tuple": "cpp"
+    }
+}
