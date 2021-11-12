@@ -6,6 +6,7 @@ typedef long long ll;
 typedef pair<ll,ll> pll;
 typedef pair<int,int> pii;
 const int mod = 1e9+7;
+const int N = 1e5+5;
 
 class Matrix {
 public:
