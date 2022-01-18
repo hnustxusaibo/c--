@@ -22,6 +22,7 @@
         "iosfwd": "cpp",
         "new": "cpp",
         "ratio": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "string_view": "cpp"
     }
 }
