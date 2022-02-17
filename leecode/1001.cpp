@@ -55,10 +55,10 @@ vector<int> gridIllumination(int n, vector<vector<int>>& lamps, vector<vector<in
             if(xx>=0&&yy>=0&&find(xx,yy)){
                 printf("xx=%d,yy=%d\n",xx,yy);
                 erase(xx,yy);
-                aa[xx]++;
-                bb[yy]++;
-                cc[xx-yy]++;
-                dd[xx+yy]++;
+                aa[xx]--;
+                bb[yy]--;
+                cc[xx-yy]--;
+                dd[xx+yy]--;
             }
         }
     }
