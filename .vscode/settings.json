@@ -1,4 +1,14 @@
 {
+    "editor.formatOnSave": true, //保存时自动格式化代码
+    // 根据打开文件的内容自动检测缩进，会覆盖默认缩进设置，相关设置： #editor.tabSize#和#editor.intertSpaces#
+    // 例如虽然下面设置的 tabSize 为 4，但是当前文件打开时是文件内容的 tabSize 为 2，所以依然会沿用 2，如果设置为 false，后续的 tabSize 则会使用 4
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true, //是否使用空格
+    "editor.tabSize": 4, // 空格或者制表符的大小
+    "editor.fontSize": 14, // 编辑器字体大小
+    // "editor.rulers": [120, 140], // 垂直标尺，会在指定列号处显示竖线
+    "editor.wordWrap": "wordWrapColumn", // 控制换行方式
+    "editor.wordWrapColumn": 200, // 控制换行的宽度
     "files.associations": {
         "vector": "cpp",
         "*.tcc": "cpp",
