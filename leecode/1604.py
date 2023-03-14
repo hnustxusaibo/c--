@@ -1,43 +1,31 @@
-#include <bits/stdc++.h>
+class Solution(object):
+    def alertNames(self, keyName, keyTime):
+        """
+        :type keyName: List[str]
+        :type keyTime: List[str]
+        :rtype: List[str]
+        """
+        name_map = {}
+        for i in range(0, len(keyName)):
+            _l = name_map.get(keyName[i], [])
+            hour, minute = int(keyTime[i][:2]), int(keyTime[i][3:])
+            _l.append(hour * 60 + minute)
+            name_map[keyName[i]] = _l
 
-using namespace std;
+        _set = set()
+        for i in range(0, len(keyName)):
+            time_list = name_map.get(keyName[i], [])
+            time_list.sort()
+            for j in range(0, len(time_list) - 2):
+                if time_list[j + 2] - time_list[j] <= 60:
+                    _set.add(keyName[i])
+                    break
+        ans = list(_set)
+        ans.sort()
+        return ans
 
 
-typedef long long ll;
-typedef pair<ll,ll> pll;
-typedef pair<int,int> pii;
-const int mod = 1e9+7;
-const int MAX = 2e9+7;
-const int N = 200+5;
-
-
-typedef pair<int,pii> piii;
-priority_queue<piii> q;
-
-bool mp[N][N][2];
-
-vector<vector<int>> pacificAtlantic(vector<vector<int>>& heights) {
-    int n = heights.size();
-    for(int i=0;i<n;i++){
-        mp[0][i][0] = 1;
-        mp[i][0][0] = 1;
-
-        mp[n-1][i][1] = 1;
-        mp[i][n-1][1] = 1;
-    }
-
-    for(int i=1;i<n-1;i++){
-        for(int j=1;j<n-1;j++){
-            piii x;
-            x.first = -heights[i][j];
-            x.second.first = i;
-            x.second.second = j;
-            q.push(x);
-        }
-    }
-
-    while(!q.empty()){
-        piii x = q.top();
-        q.pop()
-    }
-}
+if __name__ == '__main__':
+    l1 = ["daniel", "daniel", "daniel", "luis", "luis", "luis", "luis"]
+    l2 = ["10:00", "10:40", "11:00", "09:00", "11:00", "13:00", "15:00"]
+    print(str(Solution.alertNames(self=None, keyName=l1, keyTime=l2)))

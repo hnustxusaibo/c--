@@ -17,14 +17,13 @@ int waysToMakeFair(vector<int> &nums)
     for (int i = 0; i < n; i++)
     {
         if (i & 1)
-            ji++;
+            ji += nums[i];
         else
-            ou++;
+            ou += nums[i];
     }
     int jj = 0, oo = 0, ans = 0;
     for (int i = 0; i < n; i++)
     {
-        printf("ji=%d,ou=%d,jj=%d,oo=%d\n", ji, ou, jj, oo);
         if (i & 1)
             ji -= nums[i];
         else
