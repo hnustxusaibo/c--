@@ -13,24 +13,24 @@ int dp[N];
 map<int, int> mp;
 
 int maxEqualFreq(vector<int>& nums) {
-  int ans = 0;
-  for(int i=0;i<nums.size();i++) {
-    int x = nums[i];
-    if (dp[x]) {
-      mp[dp[x]]--;
-      if (mp[dp[x]] == 0) mp.erase(dp[x]);
-    }
-    dp[x]++;
-    mp[dp[x]]++;
-    if(mp.size() == 2){
-        for(auto it : mp){
-            printf("i=%d,key=%d,val=%d\n",i,it.first,it.second);
-            if(it.second == 1){
-                ans = i+1;
-                break;
+    int ans = 0;
+    for (int i = 0; i < nums.size(); i++) {
+        int x = nums[i];
+        if (dp[x]) {
+            mp[dp[x]]--;
+            if (mp[dp[x]] == 0) mp.erase(dp[x]);
+        }
+        dp[x]++;
+        mp[dp[x]]++;
+        if (mp.size() == 2) {
+            for (auto it : mp) {
+                printf("i=%d,key=%d,val=%d\n", i, it.first, it.second);
+                if (it.second == 1) {
+                    ans = i + 1;
+                    break;
+                }
             }
         }
     }
-  }
-  return ans;
+    return ans;
 }
