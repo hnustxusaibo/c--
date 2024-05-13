@@ -57,12 +57,12 @@
 
 // @lc code=start
 class Solution {
-public:
-  int jump(vector<int> &nums) {
-    int n = nums.size();
-    std::vector<int> myVector(n, 0);
-    for (int i = 0; i < n; i++) {
+   public:
+    int jump(vector<int> &nums) {
+        int n = nums.size();
+        std::vector<int> myVector(n, 0);
+        for (int i = 0; i < n; i++) {
+        }
     }
-  }
 };
 // @lc code=end
