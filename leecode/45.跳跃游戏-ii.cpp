@@ -60,9 +60,17 @@ class Solution {
    public:
     int jump(vector<int> &nums) {
         int n = nums.size();
-        std::vector<int> myVector(n, 0);
+        std::vector<int> dp(n, 0);
+        dp[0] = 1;
         for (int i = 0; i < n; i++) {
+            for (int j = 1; j <= nums[i] && i + j < n; j++) {
+                if (dp[i + j] == 0) {
+                    dp[i + j] = dp[i] + 1;
+                    // printf("dp[%d]=%d\n", i + j, dp[i + j]);
+                }
+            }
         }
+        return dp[n - 1] - 1;
     }
 };
 // @lc code=end
